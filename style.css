@@ -1,0 +1,192 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #1d1d1d;
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+  
+  .sidebar .logo img {
+    width: 100%;
+    max-width: 120px;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar nav ul li a:hover {
+    color: #1db954;
+  }
+  
+  /* Conteúdo principal */
+  .main-content {
+    margin-left: 200px;
+    padding: 20px;
+    width: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    z-index: 2;
+  }
+  
+  /* AmandaFy com coração */
+  header h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  header h1::after {
+    content: " ❤️";
+    font-size: 40px;
+  }
+  
+  /* Subtítulos */
+  h2, h3 {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  /* Grid de fotos */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px; /* MENOR espaço entre cards */
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  /* Card das fotos */
+  .card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent; /* borda menor agora */
+    width: 100%;
+  }
+  
+  /* Imagem dentro do card */
+  .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain; /* AGORA mostra a imagem inteira sem cortar */
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+    background-color: #000; /* fundo preto se a imagem for menor que o card */
+  }
+  
+  /* Hover no card */
+  .card:hover {
+    transform: scale(1.03); /* MENOR zoom */
+    border: 1px solid #1DB954;
+    box-shadow: 0 0 5px #1DB954;
+  }
+  
+  /* Hover só na imagem */
+  .card img:hover {
+    transform: scale(1.08);
+  }
+  
+  /* Seção de vídeos */
+  .videos {
+    margin-top: 40px;
+  }
+  
+  .video iframe, .video video {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+  }
+  
+  /* Mensagem final */
+  .mensagem {
+    margin-top: 40px;
+    background-color: #1d1d1d;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .mensagem p {
+    font-size: 20px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1200px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .main-content {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .sidebar {
+      display: none;
+    }
+  }
+  .letra-musica {
+    background-color: #1d1d1d;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 50px;
+    box-shadow: 0 0 10px #1db954;
+    text-align: center;
+  }
+  
+  .letra-musica h2 {
+    font-size: 32px;
+    color: #1db954;
+    margin-bottom: 20px;
+  }
+  
+  .letra-musica p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ccc;
+  }
+    
